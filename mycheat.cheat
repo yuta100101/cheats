@@ -1,0 +1,13 @@
+% conda
+# Create conda new env
+conda create -n <new_env> python=<python-version> -y
+
+% conda
+# Remove a conda env
+conda remove -n <env> --all -y
+$ env: conda env list --- --headers 2 --column 1
+
+% docker
+# Run a new container and remove when exit
+docker run --rm -it <image_name> /bin/bash
+$ image_name: docker images --format "table {{.Repository}}:{{.Tag}}\t{{.ID}}\t{{.CreatedAt}}\t{{.Size}}" --- --headers 1 --column 1
